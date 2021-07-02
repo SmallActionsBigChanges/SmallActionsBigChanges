@@ -11,9 +11,11 @@ const sendSuervey = () => {
     var datos = new FormData(form);
     // grade 
     var grade = 10;
+    /*
     console.log(datos.get("rec1"));
     console.log(datos.get("rec2"));
     console.log(datos.get("recycling2"));
+    */
 
     // #1 Question -> 1 point 
     if (datos.get("recycling1") == 2) {
@@ -56,6 +58,6 @@ const sendSuervey = () => {
     if (datos.get("recycling2") == 2) {
         grade -= 1;
     }
-
-    createChallengeList(grade);
+    
+    createChallengeList(grade, datos.get("name"));
 }

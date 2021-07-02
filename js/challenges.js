@@ -124,8 +124,8 @@ shuffle(hardChallenges);
 var myChallengeList = []; 
 
 // Create challenge
-const createChallengeList = (grade) => {
-    console.log(grade);
+const createChallengeList = (grade, name) => {
+    // console.log(grade);
     if (grade >= 8) {
         localStorage.setItem("category", 1);
         // Use 8 hard & 2 common challenges
@@ -164,6 +164,9 @@ const createChallengeList = (grade) => {
     let myChallengeListString = JSON.stringify(myChallengeList);
     localStorage.setItem("myChallenge", myChallengeListString);
 
-    alert("Lista de retos creada con exito");
-    window.location.assign("challengeDev.html");
+    // New user name
+    localStorage.setItem("userName", name);
+
+    // alert("Lista de retos creada con exito");
+    window.location.assign("challenge.html");
 }

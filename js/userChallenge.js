@@ -1,17 +1,26 @@
 // Section
 var box = document.getElementById("chl-box");
+var user = document.getElementById("user");
 var progress = document.getElementById("progress");
 var category = document.getElementById("category");
 var btnDeNuevo = document.getElementById("empezar-de-nuevo");
 
 var myChallengeList = []; 
 
+const showUser = () => {
+    // Get user name
+    let name = localStorage.getItem("userName");
+    let info = `<h3 class="">Hola ${name}!</h3>`;
+
+    user.innerHTML = info;
+}
+
 const showChallengeList = () => {
     if (localStorage.getItem("myChallenge") != undefined && localStorage.getItem("category") != undefined) {
         // Set category
         var info = ``;
         var myCategory = parseInt(localStorage.getItem("category"));
-        if (myCategory == 3) {
+        if (myCategory == 1) {
             info = `<i class="bi bi-droplet-fill text-white" style="font-size: 20pt;"></i>
                     <i class="bi bi-droplet-fill text-white" style="font-size: 20pt;"></i>
                     <i class="bi bi-droplet-fill text-white" style="font-size: 20pt;"></i>`;
@@ -91,6 +100,7 @@ const completeChallenge = (challengeId) => {
 }
 
 const displayProgress = () => {
+    // Check progress
     let pro = 0;
     myChallengeList.forEach(x => {
         if (x.completed) {
@@ -146,4 +156,22 @@ const updateStorage = () => {
     // save
     let myChallengeListString = JSON.stringify(myChallengeList);
     localStorage.setItem("myChallenge", myChallengeListString);
+}
+
+const share = (socialNetwork) => {
+    // Share on social media
+    var url = "https://smallactionsbigchanges.github.io/SmallActionsBigChanges/app/";   
+    switch (socialNetwork) {
+        case 1:
+            window.open("https://api.whatsapp.com/send?text=He completado este increíble reto, ¿te animas a intentarlo? " + url);
+            break;
+        case 2:
+            window.open("fb-messenger://share/?link=" + url);
+            break;
+        case 3:
+            window.open("https://twitter.com/intent/tweet?text=He completado este increíble reto, ¿te animas a intentarlo?&url=" + url);
+            break;
+        default:
+            break;
+    }
 }
