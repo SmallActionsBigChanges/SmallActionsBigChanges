@@ -63,7 +63,7 @@ var mediumChallenges = [
         "../img/png/044-shirt.png"),
     new Challenge("Evito rotundamente la utilización de plásticos de un solo uso y prefiero productos de marcas que emplean envases hechos con plástico reciclado",
         "Es importante reducir la producción desechos plásticos, debido a que estos no son biodegradables y muchos de estos, debido a una mala gestion de desechos solidos, acaban en afluentes naturales de agua. Además solo para producir el material plástico se necesita mucha agua.",
-        "../img/png/006-no_plstic_bags.png"),
+        "../img/png/006-no_plastic_bags.png"),
     new Challenge("No vierto en los drenajes ácidos, solventes o aceites",
         "Aceites, ácidos, solventes u otros compuestos químicos pueden ser nocivos para el agua, ya que en muchos casos no existen tratamientos reversibles, para el agua, ante estos contaminantes.",
         "../img/png/013-factory.png"),
