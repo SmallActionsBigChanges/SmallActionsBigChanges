@@ -1,0 +1,91 @@
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Small actions big changes</title>
+    <!-- Main css -->
+    <link rel="stylesheet" href="../css/main.css">
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+</head>
+<body class="quest-body">
+    <!-- temp alert -->
+    <div style="display: flex; justify-content: center; width: 100%;">
+        <div id="alert" class="alerta-success">
+            <span class="closebtn">&times;</span>  
+            <h3>¡LO HAS CONSEGUIDO!</h3>
+            <img src="../img/crown.png" alt="" style="width: 40%; height: auto;">
+            <p>
+                ¡Compartelo con tus amigos!
+            </p>
+            <div class="container">
+                <div class="item">
+                    <button class="social-media"><img src="../img/facebook.svg" alt="" style="width: 80%; height: auto;"></button>
+                    <button class="social-media"><img src="../img/twitter.svg" alt="" style="width: 80%; height: auto;"></button>
+                    <button class="social-media"><img src="../img/instagram.svg" alt="" style="width: 80%; height: auto;"></button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Progress message -->
+    <div class="information-box">
+        <div class="challenges d-flex wrap">
+            <div class="col-lg-12 col-md-12 col-sm-12" style="padding: 10px;">
+                <div class="card br-15 bg-white">
+                    <div class="card-body">
+                        <h3 class="">Hola carlos!</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-12 col-sm-12" style="padding: 10px;">
+                <div class="card br-15" style="background-color: green;">
+                    <div class="card-body">
+                        <h3 class="text-white">Categoria </h3>
+                        <div id="category">
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-12 col-sm-12" style="padding: 10px;">
+                <div class="card br-15" style="background-color: green;">
+                    <div class="card-body">
+                        <h3 class="text-white">Tu progreso </h3>
+                        <h3 id="progress" class="text-white">0%</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="challenges-box">
+        <div class="challenges d-flex wrap" id="chl-box">
+            
+        </div>
+    </div>
+
+    <br>
+    
+    <div class="text-center">
+        <button id="empezar-de-nuevo" class="btn-again" onclick="window.location.href='index.html'">
+            <i class="bi bi-check"></i>
+            Empezar de nuevo
+        </button>
+    </div>
+
+    <br>
+</body>
+<script src="../js/styleFunctions.js"></script>
+<script src="../js/userChallenge.js"></script>
+<script>
+    showChallengeList();
+    // addAlert();
+</script>
+<!-- Bootstrap -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+</html>
